@@ -1,0 +1,42 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Lieferschein",
+    "type": "object",
+    "properties": {
+        "kundenId": {
+            "type": "number"
+        },
+        "nachname": {
+            "type": "string"
+        },
+        "lieferscheinNummer": {
+            "type": "number"
+        },
+        "position": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "number"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "preis_pro_tag": {
+                    "type": "number"
+                },
+                "preis_pro_woche": {
+                    "type": "number"
+                },
+                "preis_pro_monat": {
+                    "type": "number"
+                }
+            }
+        },
+        "datumVon": {
+            "type": "string"
+        },
+        "datumBis": {
+            "type": "string"
+        }
+    }
+}

@@ -1,0 +1,9 @@
+1. Relational database (mysql) without ORM
+As soon I started writing the code I faced the problem of having to first create the database
+with all of tables and correct relations between then. And even though this is a simple
+example I still don't like that I will spend more time writing SQL than actual code.
+
+A lot of time was spent on creating custom template SQL statements for each object and for each necessary CRUD command.
+
+TLDR: I would prefer to use an ORM to take care of all the table creation, so that I didn't have
+to think about sql and could concentrate on coding.
