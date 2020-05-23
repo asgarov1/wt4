@@ -1,9 +1,41 @@
-1. Relational database (mysql) without ORM
+1. Relational database (MySQL) without ORM
 As soon I started writing the code I faced the problem of having to first create the database
-with all of tables and correct relations between then. And even though this is a simple
-example I still don't like that I will spend more time writing SQL than actual code.
+with all the tables and the correct relations between then. And even though this is a simple
+example I still didn't like that I ended up spending more time writing SQL than the actual code.
 
 A lot of time was spent on creating custom template SQL statements for each object and for each necessary CRUD command.
 
-TLDR: I would prefer to use an ORM to take care of all the table creation, so that I didn't have
-to think about sql and could concentrate on coding.
+TLDR: I would prefer to use an ORM so that I didn't have to think about sql and could concentrate on coding.
+
+---------------------------------------------------
+2. Relational database (MySQL) with ORM (Sequelize)
+
+Sequelize allowed me to remove
+those ugly template SQL statements, which made my code look so much cleaner.
+Unfortunately I still needed to define my model manually in code, as Sequelize doesn't support model import/auto-generation.
+Learning how use Sequelize and debugging mistakes that I had defining my model took just as much time as SQL writing so
+no time win here. But it should speed up the process for the future re-use.
+
+Things to keep in mind: of course every ORM adds a little overhead as well as can't always handle complex SQL statements
+but for such a small project this is not an issue.
+
+TLDR: ORM makes code neater and created an abstraction over SQL. I prefer it that way, because I don't like mixing SQL
+into code.
+
+---------------------------------------------------
+3. Non-Relational database (MongoDB)
+
+Mongodb speeded up the development and gave me more flexibility because I didn't have to
+define schema.
+
+Fazzit: more flexible due to the absence of schema
+
+---------------------------------------------------
+4. Non-Relational database (MongoDB) with ODM (Mongoose)
+
+Since there is no SQL I honestly didn't feel any benefits from Mongoose. It added the overhead
+of setting it up and I guess it is neat to have your data validated. But schema validation is also
+supported in MongoDb since 3.2 so why do we need Mongoose? Also putting a rigid structure and defining schema
+in NoSQL defeats the purpose of NoSQL I'd think?
+
+Fazzit: I don't know why would I want to use Mongoose
